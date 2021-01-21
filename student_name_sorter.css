@@ -11,7 +11,7 @@ font-family: system-ui;
 text-align: center;
 }
 
-h1 {
+h1, h2 {
 text-decoration-color: aqua;
 text-decoration: underline;
 }
@@ -31,10 +31,10 @@ input[type="button"]:hover {
 opacity: 1;
 }
 
-.row {
-display: flex;
-}
-
-.row div {
-margin-right: 10px;
+div.student_name_list_container {
+border: 3px solid black;
+border-radius: 20px;
+padding: 8px;
+background-color: darkorange;
+margin-bottom: 10px;
 }
