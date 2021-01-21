@@ -1,11 +1,38 @@
-function sortStudentNames(){
-    var studentNames=[document.querySelector('input[type="text"][data-student-num="1"]').value, document.querySelector('input[type="text"][data-student-num="2"]').value,
-    document.querySelector('input[type="text"][data-student-num="3"]').value, document.querySelector('input[type="text"][data-student-num="4"]').value];
+var studentNameStrs=[];
 
-    console.log(studentNames);
-    studentNames=studentNames.sort();
-    document.querySelector('input[type="text"][data-student-num="1"]').value=studentNames[0];
-    document.querySelector('input[type="text"][data-student-num="2"]').value=studentNames[1];
-    document.querySelector('input[type="text"][data-student-num="3"]').value=studentNames[2];
-    document.querySelector('input[type="text"][data-student-num="4"]').value=studentNames[3];
+function submitStudentNames(){
+    for(studentNameIndexNum=1; studentNameIndexNum<=4; studentNameIndexNum++){
+        var studentNameStr=document.querySelector('input[data-student-num="'+studentNameIndexNum+'"]').value;
+
+        studentNameStrs.push(studentNameStr);
+
+        var studentNameLi=document.createElement('li');
+
+        studentNameLi.innerText=studentNameStr;
+
+        document.querySelector('ol').appendChild(studentNameLi);
+        document.querySelector('p').innerText=document.querySelector('p').innerText+', Name: '+studentNameStr;
+        
+    }
+}
+
+function sortStudentNames(){
+    studentNameStrs.sort();
+    document.querySelector('ol').innerHTML='';
+    document.querySelector('ul').innerHTML='';
+    document.querySelector('p').innerText='';
+
+    for(studentNameIndexNum=1; studentNameIndexNum<=4; studentNameIndexNum++){
+        var studentNameStr=document.querySelector('input[data-student-num="'+studentNameIndexNum+'"]').value;
+
+        studentNameStrs.push(studentNameStr);
+
+        var studentNameLi=document.createElement('li');
+
+        studentNameLi.innerText=studentNameStr;
+
+        document.querySelector('ol').appendChild(studentNameLi);
+        document.querySelector('p').innerText=document.querySelector('p').innerText+', Name: '+studentNameStr;
+        
+    }
 }
