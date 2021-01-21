@@ -6,23 +6,21 @@
         <link rel="stylesheet" href="student_name_sorter.css">
     </head>
     <body>
+        <input type="text" placeholder="Student 1" data-student-num="1">
+        <input type="text" placeholder="Student 2" data-student-num="2">
+        <input type="text" placeholder="Student 3" data-student-num="3">
+        <input type="text" placeholder="Student 4" data-student-num="4">
         <h1>Student Name Sorter</h1>
-        <div class="row">
-            <div>1</div>
-            <input type="text" data-student-num="1" placeholder="Student 1">
+        <div class="student_name_list_without_commas_container student_name_list_container">
+            <h2>Student Name List Without Commas</h2>
+            <ol>
+            </ol>
+        </div>  
+        <div class="student_name_list_with_commas_container student_name_list_container">
+            <h2>Student Name List With Commas</h2>
+            <p></p>
         </div>
-        <div class="row">
-            <div>2</div>
-            <input type="text" data-student-num="2" placeholder="Student 2">
-        </div>
-        <div class="row">
-            <div>3</div>
-            <input type="text" data-student-num="3" placeholder="Student 3">
-        </div>
-        <div class="row">
-            <div>4</div>
-            <input type="text" data-student-num="4" placeholder="Student 4">
-        </div>
+        <input type="button" value="Submit" onclick="submitStudentNames();">
         <input type="button" value="Sort" onclick="sortStudentNames();">
         <div class="script">
             <script src="student_name_sorter.js"></script>
